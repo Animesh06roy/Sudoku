@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Game - Kshitij Workshop</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- You can use a free icon from Font Awesome or similar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fa-solid fa-table-cells-large"></i> Sudoku Master</h1>
+      <p class="subtitle">Sharpen your mind. Conquer the grid!</p>
+    </header>
+    <main>
+      <div id="stats"></div>
+      <div id="timer">Time: 00:00</div>
+      <div id="sudoku-board"></div>
+      <div class="controls">
+        <button id="check-btn">Check Solution</button>
+        <button id="reset-btn">Reset</button>
+        <button id="new-game-btn">New Game</button>
+        <button id="hint-btn">Hint</button>
+        <button id="toggle-theme-btn">Dark Mode</button>
+      </div>
+      <div id="message"></div>
+    </main>
+    <footer>
+      <small>&copy; 2025 Kshitij Workshop</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

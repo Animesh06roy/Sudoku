@@ -1,0 +1,145 @@
+:root {
+  --primary: #22223b;
+  --secondary: #4a4e69;
+  --accent: #9a8c98;
+  --bg: #f2e9e4;
+  --cell-bg: #fff;
+  --cell-border: #c9ada7;
+  --highlight: #f67280;
+  --success: #4caf50;
+  --error: #e63946;
+}
+
+body {
+  background: var(--bg);
+  color: var(--primary);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 2.2em);
+  grid-template-rows: repeat(9, 2.2em);
+  gap: 2px;
+  margin: 1rem auto;
+  background: var(--cell-border);
+  border-radius: 0.5em;
+  width: fit-content;
+}
+
+.sudoku-cell {
+  background: var(--cell-bg);
+  text-align: center;
+  font-size: 1.2em;
+  border: 1px solid var(--cell-border);
+  outline: none;
+  transition: background 0.2s;
+}
+
+.sudoku-cell.prefilled {
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.sudoku-cell.invalid {
+  background: var(--error);
+  color: #fff;
+}
+
+.sudoku-cell.solved {
+  background: var(--success);
+  color: #fff;
+}
+
+.sudoku-cell:focus {
+  background: var(--highlight);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+button {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+button:hover, button:focus {
+  background: var(--primary);
+}
+
+#message {
+  min-height: 1.5em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#timer {
+  text-align: right;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+#stats {
+  text-align: left;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2em;
+  color: var(--secondary);
+  font-size: 0.9em;
+}
+
+body.dark-mode {
+  --bg: #232323;
+  --primary: #f2e9e4;
+  --secondary: #9a8c98;
+  --accent: #4a4e69;
+  --cell-bg: #22223b;
+  --cell-border: #9a8c98;
+  --highlight: #f67280;
+  --success: #4caf50;
+  --error: #e63946;
+}
